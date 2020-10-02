@@ -1,14 +1,126 @@
 .html {
-    font-family: 'Raleway', sans-serif;
-    font-size: 62.5%;
+    // font-family: 'Raleway', sans-serif;
+    
 }
 
+.price-text {
+    color: #f27a1a;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* NAVBAR */
 .navbar {
+    font-size: 16px;
+    border-bottom: 1px solid #e7e7e7;
+    
     .navbar-brand {
         img {
-            max-width: 25rem;
-            max-height: 8rem;
+             max-width: 13rem;
+             max-height: 5rem;
+        }
+    }
+    .collapse {
+        .form-inline {
+            input {
+                width: 20rem;
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                margin-left: 5px;
+                i {
+                    position: relative;
+                    .badge {
+                        position: absolute;
+                        bottom: .5rem;
+                        left: 1.2rem;
+                        border: 1px solid white;
+                        background-color: red;
+                        border-radius: 20px;
+                        color: white;
+                        font-size: .8rem;
+                    }
+                }
+                
+                .nav-link::first-letter {
+                    text-transform: uppercase;
+                }
+                .dropdown-menu {
+                    .dropdown-item::first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#navbar-iki {
+    // color: rgba(46, 46, 46, 1) !important;
+    .nav-link {
+        color: black !important; 
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: .5px;
+    }
+    .nav-link:hover {
+        color: #555 !important;
+    }
+    .nav-link::first-letter {
+        text-transform: uppercase;
+    }
+    
+}
+
+/* CONTENT */
+#head-content {
+    .list-group {
+        color: #212529 !important;
+        max-width: 190px;
+        border-radius: 2px !important;
+        .active {
+            background-color: #f5f5f5 !important;
+            color: #212529 !important;
+            border: .5px solid #ddd !important;
+            border-radius: 2px !important;
+
+        }
+        &-item {
+            // border: .5px solid #ddd !important;
+            // border-radius: 2px !important;
+
         }
 
+        &-item-heading {
+            // background-color: #f5f5f5;
+            // border: .5px solid #ddd;
+            // border-radius: 2px !important;
+            color: #212529;
+            text-align: center !important;
+            margin-bottom: 2%;
+        }
+    }
+    .card {
+        display: flex;
+        align-items: center;
+        
+        .card-header {
+            background-color: white !important;
+            border: none !important;
+        }
+
+        .card-img-top {
+            max-width: 13rem;
+        }
+        &-body {
+            .card-price {
+                display: flex;
+                justify-content: center;
+                p {
+                    padding: 2px;
+                }
+            }
+        }
     }
 }
