@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'HomepageController@index')->name('homepage');
+Route::get('/kategorie', 'CategoryController@index')->name('kategorie');

@@ -19,8 +19,8 @@
                 </div> 
             </div>
             
-            <div class="col-md-6">
-                @include('layouts.partials.carousel')
+            <div class="col-md-6 mt-5">
+                    @include('layouts.partials.carousel')                
             </div>
 
             <div class="col-md-3 text-center">
