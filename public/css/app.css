@@ -11982,6 +11982,11 @@ a.text-dark:focus {
   min-height: 28vh;
 }
 
+.delete-icon {
+  color: #333333 !important;
+  padding-top: 10px;
+}
+
 /* NAVBAR */
 
 .navbar {

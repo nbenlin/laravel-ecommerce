@@ -13,3 +13,16 @@
 
 Route::get('/', 'HomepageController@index')->name('homepage');
 Route::get('/kategorie', 'CategoryController@index')->name('kategorie');
+
+Route::group(['prefix' => 'user'], function() {
+    Route::get('/logowania', 'UserController@login_form')->name('user.login');
+    Route::get('/zarejestruj', 'UserController@register_form')->name('user.register');
+});
+
+Route::get('/koszyk', 'CartController@index')->name('cart');
+
+Route::get('/zamowienia', 'OrderController@index')->name('orders');
+Route::get('/zamowienie/{id}','OrderController@detail')->name('order'); 
+
+Route::get('/platnosc', 'PaymentController@index')->name('payment');
+

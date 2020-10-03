@@ -35,7 +35,7 @@
         </div>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-xs-block" id="navbar-iki">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-block" id="navbar-iki">
         <div class="container">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mx-auto">
