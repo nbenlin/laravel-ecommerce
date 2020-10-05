@@ -1,55 +1,32 @@
 @extends('layouts.master')
-@section('title', 'Kategori')
+@section('title', $category->category_name)
 @section('content')
 <div class="container mt-4">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Strona Główna</a></li>
-          <li class="breadcrumb-item"><a href="#">Kategoria</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Kategoria</li>
+        <li class="breadcrumb-item"><a href="{{route('homepage')}}">Strona Główna</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ $category->category_name }}</li>
         </ol>
-      </nav>
+    </nav>
    <div class="row">
        <div class="col-md-3">
            <div class="card">
-               <div class="card-header">Kategori Adı</div>
+           <div class="card-header">{{ $category->category_name }}</div>
                <div class="card-body">
                    <div class="card">
                         <div class="card-header">Alt Kategoriler</div>
                         <div class="card-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-minus mr-1"></i>Alt Kategori</a>
-                                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-minus mr-1"></i>Alt Kategori</a>
-                                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-minus mr-1"></i>Alt Kategori</a>
-                                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-minus mr-1"></i>Alt Kategori</a>
-                                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-minus mr-1"></i>Alt Kategori</a>
-                                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-minus mr-1"></i>Alt Kategori</a>                 
+                                @foreach ($sub_categories as $sub_category)
+                            <a href="{{route('categories', $sub_category->slug)}}" class="list-group-item list-group-item-action">
+                                        <i class="fa fa-minus mr-1"></i>
+                                        {{$sub_category->category_name}}
+                                    </a>    
+                                @endforeach
+                                
                             </div>
                         </div>
-                    </div>
-                    <div class="card mt-3">
-                        <div class="card-header">Przedział cenowy</div>
-                        <div class="card-body">
-                            <div class="list-group categories">
-                                <form>
-                                    <div class="form-group">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> 100-200
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> 200-300
-                                            </label>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>                    
+                    </div>                   
                </div>
            </div>
        </div>

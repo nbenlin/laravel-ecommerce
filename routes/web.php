@@ -12,7 +12,10 @@
 */
 
 Route::get('/', 'HomepageController@index')->name('homepage');
-Route::get('/kategorie', 'CategoryController@index')->name('kategorie');
+
+Route::get('/kategorie/{slug_categoryname}', 'CategoryController@index')->name('categories');
+
+Route::get('/produkt/{slug_productname}', 'ProductController@index')->name('product');
 
 Route::group(['prefix' => 'user'], function() {
     Route::get('/logowania', 'UserController@login_form')->name('user.login');
@@ -25,4 +28,6 @@ Route::get('/zamowienia', 'OrderController@index')->name('orders');
 Route::get('/zamowienie/{id}','OrderController@detail')->name('order'); 
 
 Route::get('/platnosc', 'PaymentController@index')->name('payment');
+
+
 

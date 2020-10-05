@@ -8,14 +8,11 @@
                     <a href="#" class="list-group-item-heading list-group-item-action">
                       <h5>Kategorie</h5>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action active">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kategori ismi</a>                    
+                    @foreach ($categories as $category)
+                <a href="{{route('categories', $category->slug)}}" class="list-group-item list-group-item-action">
+                            {{ $category->category_name }}
+                        </a>    
+                    @endforeach                                        
                 </div> 
             </div>
             
