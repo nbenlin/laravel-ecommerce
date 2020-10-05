@@ -9,7 +9,7 @@
                       <h5>Kategorie</h5>
                     </a>
                     @foreach ($categories as $category)
-                <a href="{{route('categories', $category->slug)}}" class="list-group-item list-group-item-action">
+                        <a href="{{route('categories', $category->slug)}}" class="list-group-item list-group-item-action">
                             {{ $category->category_name }}
                         </a>    
                     @endforeach                                        
